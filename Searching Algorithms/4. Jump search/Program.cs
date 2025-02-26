@@ -4,6 +4,8 @@ using static System.Net.Mime.MediaTypeNames;
 
 Console.WriteLine(JumpSearch([3, 4, 6, 7, 9, 10, 11, 12, 13, 20], 13));
 
+//u sustini gledas da li je target ispod najveceg broja u bucketu.
+//Kad nadjes bucket onda radis linear search u njemu dok ne nadjes index
 int JumpSearch(int[] items, int target)
 {
     int optimalBuckets = (int)Math.Sqrt((double)items.Length);
