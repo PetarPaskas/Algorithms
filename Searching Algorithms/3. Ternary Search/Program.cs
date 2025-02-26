@@ -27,11 +27,11 @@ int TernarySearch(int[] items, int target, int left, int right)
     if (items[mid2] == target)
         return mid2;
 
-    if (target < items[mid1])
-        return TernarySearch(items, target, left, mid1 - 1);
+    if (target < items[mid1]) //if target in 1st partition
+        return TernarySearch(items, target, left, mid1 - 1); 
 
-    if (target > items[mid2])
+    if (target > items[mid2]) //if target in 3rd partition
         return TernarySearch(items, target, mid2+1, right);
 
-    return TernarySearch(items, target, mid1 + 1, mid2 - 1);
+    return TernarySearch(items, target, mid1 + 1, mid2 - 1); //if target in 2nd(in-between) partiiton
 }
